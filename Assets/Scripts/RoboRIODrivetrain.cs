@@ -48,16 +48,26 @@ public class RoboRIODrivetrain : MonoBehaviour {
             ws3 = ws3 / max;
             ws4 = ws4 / max;
         }
+        if (Mathf.Abs(y) > 0.05 || Mathf.Abs(x) > 0.05 || Mathf.Abs(t) > 0.05)
+        {
+            script.leftBackAngle = wa3;
+            script.rightBackAngle = wa4;
+            script.leftFrontAngle = wa2;
+            script.rightFrontAngle = wa1;
 
-        script.leftBackAngle = wa3;
-        script.rightBackAngle = wa4;
-        script.leftFrontAngle = wa2;
-        script.rightFrontAngle = wa1;
+            script.leftBackPower = ws3;
+            script.rightBackPower = ws4;
+            script.leftFrontPower = ws2;
+            script.rightFrontPower = ws1;
+        }
+        else
+        {
+            script.leftBackPower = 0;
+            script.rightBackPower = 0;
+            script.leftFrontPower = 0;
+            script.rightFrontPower = 0;
+        }
 
-        script.leftBackPower = ws3;
-        script.rightBackPower = ws4;
-        script.leftFrontPower = ws2;
-        script.rightFrontPower = ws1;
     }
 
     void deadband(ref float value)

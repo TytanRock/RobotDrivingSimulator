@@ -40,7 +40,7 @@ public class SwerveDrive : MonoBehaviour {
         if (leftBackPower < 0.05)
         {
             backLeft.motorTorque = 0;
-            backLeft.brakeTorque = 10;
+            backLeft.brakeTorque = 100;
         }
         else
         {
@@ -49,7 +49,7 @@ public class SwerveDrive : MonoBehaviour {
         if (leftFrontPower < 0.05)
         {
             frontLeft.motorTorque = 0;
-            frontLeft.brakeTorque = 10;
+            frontLeft.brakeTorque = 100;
         }
         else
         {
@@ -58,7 +58,7 @@ public class SwerveDrive : MonoBehaviour {
         if (rightBackPower < 0.05)
         {
             backRight.motorTorque = 0;
-            backRight.brakeTorque = 10;
+            backRight.brakeTorque = 100;
         }
         else
         {
@@ -67,7 +67,7 @@ public class SwerveDrive : MonoBehaviour {
         if (rightFrontPower < 0.05)
         {
             frontRight.motorTorque = 0;
-            frontRight.brakeTorque = 10;
+            frontRight.brakeTorque = 100;
         }
         else
         {
